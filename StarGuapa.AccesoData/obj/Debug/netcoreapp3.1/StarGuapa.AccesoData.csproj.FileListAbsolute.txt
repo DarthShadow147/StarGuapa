@@ -1,0 +1,5 @@
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.AccesoData\bin\Debug\netcoreapp3.1\StarGuapa.AccesoData.deps.json
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.AccesoData\bin\Debug\netcoreapp3.1\StarGuapa.AccesoData.dll
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.AccesoData\obj\Debug\netcoreapp3.1\StarGuapa.AccesoData.csprojAssemblyReference.cache
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.AccesoData\obj\Debug\netcoreapp3.1\StarGuapa.AccesoData.AssemblyInfoInputs.cache
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.AccesoData\obj\Debug\netcoreapp3.1\StarGuapa.AccesoData.AssemblyInfo.cs

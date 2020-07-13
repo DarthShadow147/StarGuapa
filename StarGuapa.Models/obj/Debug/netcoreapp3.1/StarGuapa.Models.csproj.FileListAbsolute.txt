@@ -1,0 +1,9 @@
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.Models\bin\Debug\netcoreapp3.1\StarGuapa.Models.deps.json
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.Models\bin\Debug\netcoreapp3.1\StarGuapa.Models.dll
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.Models\obj\Debug\netcoreapp3.1\StarGuapa.Models.AssemblyInfoInputs.cache
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.Models\obj\Debug\netcoreapp3.1\StarGuapa.Models.AssemblyInfo.cs
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.Models\bin\Debug\netcoreapp3.1\StarGuapa.Models.pdb
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.Models\obj\Debug\netcoreapp3.1\StarGuapa.Models.csproj.CoreCompileInputs.cache
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.Models\obj\Debug\netcoreapp3.1\StarGuapa.Models.dll
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.Models\obj\Debug\netcoreapp3.1\StarGuapa.Models.pdb
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.Models\obj\Debug\netcoreapp3.1\StarGuapa.Models.csprojAssemblyReference.cache
