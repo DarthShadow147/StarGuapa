@@ -487,3 +487,7 @@ C:\Users\e_aam\source\repos\StarGuapa\StarGuapa\obj\Debug\netcoreapp3.1\Razor\Ar
 C:\Users\e_aam\source\repos\StarGuapa\StarGuapa\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\e_aam\source\repos\StarGuapa\StarGuapa\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\e_aam\source\repos\StarGuapa\StarGuapa\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Usuarios\Index.cshtml.g.cs
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CategoryMenu\Default.cshtml.g.cs
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Articulos\Lista.cshtml.g.cs
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_articleCard.cshtml.g.cs
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Articulos\Details.cshtml.g.cs

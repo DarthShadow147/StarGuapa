@@ -10,6 +10,7 @@ namespace StarGuapa.DataAccess.Data.Repository
     {
         IEnumerable<SelectListItem> GetListaCategorias();
         void Update(Categoria categoria);
+        IEnumerable<Categoria> GetAllCategories { get; }
 
     }
 }

@@ -17,6 +17,8 @@ namespace StarGuapa.DataAccess.Data
             _db = db;
         }
 
+        public IEnumerable<Categoria> GetAllCategories => _db.Categoria;
+
         public IEnumerable<SelectListItem> GetListaCategorias()
         {
             return _db.Categoria.Select(i => new SelectListItem()

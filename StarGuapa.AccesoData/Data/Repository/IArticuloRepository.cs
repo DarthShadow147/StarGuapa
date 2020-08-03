@@ -9,5 +9,7 @@ namespace StarGuapa.DataAccess.Data.Repository
     public interface IArticuloRepository : IRepository<Articulo>
     {
         void Update(Articulo articulo);
+        IEnumerable<Articulo> GetAllArticulos { get; }
+        Articulo GetArticuloById(int Id);
     }
 }

@@ -42,6 +42,9 @@ namespace StarGuapa
 
             services.AddSingleton<IEmailSender, EmailSender>();
 
+            services.AddScoped<IArticuloRepository, ArticuloRepository>();
+            services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+
             services.AddScoped<IContenedorTrabajo, ContenedorTrabajo>();
             services.AddScoped<IInicializadorDB, InicializadorDB>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
 using StarGuapa.DataAccess.Data.Repository;
+using StarGuapa.Models;
 using StarGuapa.Models.ViewModels;
 
 namespace StarGuapa.Areas.Admin.Controllers
@@ -18,11 +19,47 @@ namespace StarGuapa.Areas.Admin.Controllers
     {
         private readonly IContenedorTrabajo _contenedorTrabajo;
         private readonly IWebHostEnvironment _hostingEnvironment;
+        private readonly IArticuloRepository _articuloRepository;
+        private readonly ICategoriaRepository _categoriaRepository;
 
-        public ArticulosController(IContenedorTrabajo contenedorTrabajo, IWebHostEnvironment hostingEnvironment)
+        public ArticulosController(IContenedorTrabajo contenedorTrabajo, IWebHostEnvironment hostingEnvironment, IArticuloRepository articuloRepository, ICategoriaRepository categoriaRepository)
         {
             _contenedorTrabajo = contenedorTrabajo;
             _hostingEnvironment = hostingEnvironment;
+            _articuloRepository = articuloRepository;
+            _categoriaRepository = categoriaRepository;
+        }
+
+        public ViewResult Lista(string categoria)
+        {
+            IEnumerable<Articulo> articulos;
+            string categoriaActual;
+
+            if (string.IsNullOrEmpty(categoria))
+            {
+                articulos = _articuloRepository.GetAllArticulos.OrderBy(c => c.Id);
+                categoriaActual = "Todos los articulos";
+            }
+            else
+            {
+                articulos = _articuloRepository.GetAllArticulos.Where(c => c.Categoria.Nombre == categoria);
+                categoriaActual = _categoriaRepository.GetAllCategories.FirstOrDefault(c => c.Nombre == categoria)?.Nombre;
+            }
+
+            return View(new ArticuloCategoriaVM 
+            {
+                Articulos = articulos,
+                CategoriaActual = categoriaActual
+            });
+        }
+
+        public IActionResult Details(int id)
+        {
+            var articulo = _articuloRepository.GetArticuloById(id);
+            if (articulo == null)
+                return NotFound();
+
+            return View(articulo);
         }
 
         [HttpGet]

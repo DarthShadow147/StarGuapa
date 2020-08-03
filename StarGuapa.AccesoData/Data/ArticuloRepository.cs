@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using StarGuapa.DataAccess.Data.Repository;
 using StarGuapa.Models;
 using System;
@@ -15,6 +16,19 @@ namespace StarGuapa.DataAccess.Data
         public ArticuloRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
+        }
+
+        public IEnumerable<Articulo> GetAllArticulos
+        {
+            get
+            {
+                return _db.Articulo.Include(c => c.Categoria);
+            }
+        }
+
+        public Articulo GetArticuloById(int Id)
+        {
+            return _db.Articulo.FirstOrDefault(c => c.Id == Id);
         }
 
         public void Update(Articulo articulo)

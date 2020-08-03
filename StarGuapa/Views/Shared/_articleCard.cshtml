@@ -1,0 +1,10 @@
+﻿@model Articulo
+<div class="col-3">
+    <div class="card">
+        <img src="@Model.UrlImagen" class="img-thumbnail" width="" />
+        <div class="card-body">
+            <h3 class="text-center"><a asp-area="Client" asp-controller="Home" asp-action="Details" asp-route-id="@Model.Id">@Model.Nombre</a></h3>
+            <p class="text-secondary">@Html.Raw(Model.Descripcion)</p>
+        </div>
+    </div>
+</div>
