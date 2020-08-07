@@ -26,6 +26,7 @@
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav mr-auto">
                         @await Component.InvokeAsync("CategoryMenu")
+                        @await Component.InvokeAsync("ShoppingCartSummary")
                         @if (User.IsInRole(StarGuapa.Utilities.CNT.Administrador))
                         {
                             <li class="nav-item dropdown">
@@ -37,6 +38,7 @@
                                     <a class="dropdown-item" asp-area="Admin" asp-controller="Articulos" asp-action="Index">Articulos</a>
                                     <a class="dropdown-item" asp-area="Admin" asp-controller="Sliders" asp-action="Index">Sliders</a>
                                     <a class="dropdown-item" asp-area="Admin" asp-controller="Usuarios" asp-action="Index">Usuarios</a>
+                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Ordenes" asp-action="Index">Ordenes</a>
                                 </div>
                             </li>
                         }

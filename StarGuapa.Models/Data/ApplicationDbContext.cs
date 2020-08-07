@@ -18,5 +18,8 @@ namespace StarGuapa.DataAccess.Data
         public DbSet<Articulo> Articulo { get; set; }
         public DbSet<Slider> Slider { get; set; }
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
+        public DbSet<ShoppingCartItem> ShoppingCartItem { get; set; }
+        public DbSet<Orden> Orden { get; set; }
+        public DbSet<OrdenDetalle> OrdenDetalle { get; set; }
     }
 }

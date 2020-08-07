@@ -491,3 +491,8 @@ C:\Users\e_aam\source\repos\StarGuapa\StarGuapa\obj\Debug\netcoreapp3.1\Razor\Vi
 C:\Users\e_aam\source\repos\StarGuapa\StarGuapa\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Articulos\Lista.cshtml.g.cs
 C:\Users\e_aam\source\repos\StarGuapa\StarGuapa\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_articleCard.cshtml.g.cs
 C:\Users\e_aam\source\repos\StarGuapa\StarGuapa\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Articulos\Details.cshtml.g.cs
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa\obj\Debug\netcoreapp3.1\Razor\Areas\Client\Views\Home\Lista.cshtml.g.cs
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\ShoppingCartSummary\Default.cshtml.g.cs
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa\obj\Debug\netcoreapp3.1\Razor\Areas\Client\Views\ShoppingCart\Index.cshtml.g.cs
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa\obj\Debug\netcoreapp3.1\Razor\Areas\Client\Views\Orden\Checkout.cshtml.g.cs
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa\obj\Debug\netcoreapp3.1\Razor\Areas\Client\Views\Orden\CheckoutComplete.cshtml.g.cs

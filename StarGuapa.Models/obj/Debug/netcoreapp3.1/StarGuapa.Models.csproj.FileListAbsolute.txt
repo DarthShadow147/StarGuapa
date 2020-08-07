@@ -7,3 +7,6 @@ C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.Models\obj\Debug\netcoreapp3.1\S
 C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.Models\obj\Debug\netcoreapp3.1\StarGuapa.Models.dll
 C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.Models\obj\Debug\netcoreapp3.1\StarGuapa.Models.pdb
 C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.Models\obj\Debug\netcoreapp3.1\StarGuapa.Models.csprojAssemblyReference.cache
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.Models\bin\Debug\netcoreapp3.1\StarGuapa.Utilities.dll
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.Models\bin\Debug\netcoreapp3.1\StarGuapa.Utilities.pdb
+C:\Users\e_aam\source\repos\StarGuapa\StarGuapa.Models\obj\Debug\netcoreapp3.1\StarGuapa.Models.csproj.CopyComplete

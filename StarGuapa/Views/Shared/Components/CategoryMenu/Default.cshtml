@@ -6,12 +6,12 @@
         @foreach(var categoria in Model)
         {
             <li>
-                <a class="dropdown-item" asp-area="Admin" asp-controller="Articulos" asp-action="Lista" asp-route-categoria="@categoria.Nombre">@categoria.Nombre</a>
+                <a class="dropdown-item" asp-area="Client" asp-controller="Home" asp-action="Lista" asp-route-categoria="@categoria.Nombre">@categoria.Nombre</a>
             </li>
         }
         <li class="divider"></li>
         <li>
-            <a class="dropdown-item" asp-area="Admin" asp-controller="Articulos" asp-action="Lista" asp-route-categoria="">Ver todas los productos</a>
+            <a class="dropdown-item" asp-area="Client" asp-controller="Home" asp-action="Lista" asp-route-categoria="">Ver todas los productos</a>
         </li>
     </ul>
 </li>

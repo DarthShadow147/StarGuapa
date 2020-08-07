@@ -17,6 +17,8 @@ using StarGuapa.Utilities;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using StarGuapa.Models;
 using StarGuapa.DataAccess.Data.Inicializador;
+using StarGuapa.Models.Data.Repository;
+using StarGuapa.Models.Data;
 
 namespace StarGuapa
 {
@@ -44,11 +46,17 @@ namespace StarGuapa
 
             services.AddScoped<IArticuloRepository, ArticuloRepository>();
             services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+            services.AddScoped<ShoppingCart>(sc => ShoppingCart.GetCart(sc));
+            services.AddScoped<IOrdenRepository, OrdenRepository>();
+
 
             services.AddScoped<IContenedorTrabajo, ContenedorTrabajo>();
             services.AddScoped<IInicializadorDB, InicializadorDB>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages();
+
+            services.AddHttpContextAccessor();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -67,7 +75,7 @@ namespace StarGuapa
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseSession();
             app.UseRouting();
             dbInicial.Inicializar();
             app.UseAuthentication();

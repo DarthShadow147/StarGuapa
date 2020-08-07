@@ -1,0 +1,9 @@
+﻿@model StarGuapa.Models.ViewModels.ArticuloCategoriaVM
+
+<h1>@Model.CategoriaActual</h1>
+<div class="row">
+    @foreach (var articulo in Model.Articulos.OrderBy(o => o.Id))
+    {
+        <partial name="_articleCard" model="articulo" />
+    }
+</div>

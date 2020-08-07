@@ -13,7 +13,7 @@
                 <h4 class="text-primary">@Model.Nombre</h4>
             </div>
             <div class="col-4 col-md-4">
-                <h4 class="text-muted">@Model.Precio</h4>
+                <h4 class="text-muted text-right"><b>$ </b>@Model.Precio.ToString("#,##0.00").Replace(",00", "")</h4>
             </div>
         </div>
         <div class="card-body">
@@ -26,10 +26,11 @@
             <div class="row">
                 <div class="col-12 col-md-6 pb-1">
                     <a asp-action="Index" class="btn btn-danger btn-sm"><i class="fa fa-arrow-left"></i> Volver a lista</a>
-                    <a class="btn btn-success btn-sm" 
-                       asp-controller=""
+                    <a class="btn btn-success btn-sm"
+                       asp-area="Client"
+                       asp-controller="ShoppingCart"
                        asp-action="AddToShoppingCart"
-                       asp-route-id="@Model.Id"><i class="fa fa-shopping-cart"></i> Agregar al carro</a>
+                       asp-route-articuloId="@Model.Id"><i class="fa fa-shopping-cart"></i> Agregar al carro</a>
                 </div>
             </div>
         </div>

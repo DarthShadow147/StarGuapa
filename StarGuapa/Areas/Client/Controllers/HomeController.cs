@@ -15,10 +15,14 @@ namespace StarGuapa.Controllers
     public class HomeController : Controller
     {
         private readonly IContenedorTrabajo _contenedorTrabajo;
+        private readonly IArticuloRepository _articuloRepository;
+        private readonly ICategoriaRepository _categoriaRepository;
 
-        public HomeController(IContenedorTrabajo contenedorTrabajo)
+        public HomeController(IContenedorTrabajo contenedorTrabajo, IArticuloRepository articuloRepository, ICategoriaRepository categoriaRepository)
         {
             _contenedorTrabajo = contenedorTrabajo;
+            _articuloRepository = articuloRepository;
+            _categoriaRepository = categoriaRepository;
         }
 
         public IActionResult Index()
@@ -31,10 +35,36 @@ namespace StarGuapa.Controllers
             return View(homeVM);
         }
 
+        public ViewResult Lista(string categoria)
+        {
+            IEnumerable<Articulo> articulos;
+            string categoriaActual;
+
+            if (string.IsNullOrEmpty(categoria))
+            {
+                articulos = _articuloRepository.GetAllArticulos.OrderBy(c => c.Id);
+                categoriaActual = "Todos los articulos";
+            }
+            else
+            {
+                articulos = _articuloRepository.GetAllArticulos.Where(c => c.Categoria.Nombre == categoria);
+                categoriaActual = _categoriaRepository.GetAllCategories.FirstOrDefault(c => c.Nombre == categoria)?.Nombre;
+            }
+
+            return View(new ArticuloCategoriaVM
+            {
+                Articulos = articulos,
+                CategoriaActual = categoriaActual
+            });
+        }
+
         public IActionResult Details(int id)
         {
-            var articuloDesdeDb = _contenedorTrabajo.Articulo.GetFirstOrDefault(a => a.Id == id);
-            return View(articuloDesdeDb);
+            var articulo = _articuloRepository.GetArticuloById(id);
+            if (articulo == null)
+                return NotFound();
+
+            return View(articulo);
         }
     }
 }

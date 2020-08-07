@@ -1,0 +1,199 @@
+﻿@model StarGuapa.Models.Orden
+@{
+    ViewData["Title"] = "Checkout";
+}
+<h4 class="text-center">Estás a un paso de pedir prendas increíbles</h4>
+<form method="post" asp-action="Checkout">
+    <div class="row px-2 mx-2 border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="col-10 offset-1 mt-4">
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Nombres" class="col-md-2 control-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Nombres" class="form-control" />
+                    <span asp-validation-for="Nombres" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Apellidos" class="col-md-2 control-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Apellidos" class="form-control" />
+                    <span asp-validation-for="Apellidos" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Direccion" class="col-md-2 control-label"></label>
+                </div>
+                <div class="col-5">
+                    <select asp-for="Direccion" class="custom-select mr-sm-2">
+                        <option value="00">--Seleccione--</option>
+                        <option value="Anillo">Anillo</option>
+                        <option value="Autopista">Autopista</option>
+                        <option value="Avenida">Avenida</option>
+                        <option value="Avenida Calle">Avenida Calle</option>
+                        <option value="Avenida Carrera">Avenida Carrera</option>
+                        <option value="Calle">Calle</option>
+                        <option value="Carrera">Carrera</option>
+                        <option value="Circular">Circular</option>
+                        <option value="Diagonal">Diagonal</option>
+                        <option value="Transversal">Transversal</option>
+                        <option value="Zona">Zona</option>
+                    </select>
+                    <span asp-validation-for="Direccion" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-3">
+                            <input asp-for="CalleCampo1" class="form-control" />
+                            <span asp-validation-for="CalleCampo1" class="text-danger"></span>
+                        </div>
+                        <p>#</p>
+                        <div class="col-3">
+                            <input asp-for="CalleCampo2" class="form-control" />
+                            <span asp-validation-for="CalleCampo2" class="text-danger"></span>
+                        </div>
+                        <p>-</p>
+                        <div class="col-3">
+                            <input asp-for="CalleCampo3" class="form-control" />
+                            <span asp-validation-for="CalleCampo3" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Barrio" class="col-md-2 control-label"></label>
+                </div>
+                <div class="col-md-5">
+                    <input asp-for="Barrio" class="form-control" />
+                    <span asp-validation-for="Barrio" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="TipoInmueble" class="col-md-4 control-label"></label>
+                </div>
+                <div class="col-5">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <select asp-for="TipoInmueble" class="custom-select mr-sm-2">
+                                <option value="00">--Seleccione--</option>
+                                <option value="Apartamento">Apartamento</option>
+                                <option value="Casa">Casa</option>
+                                <option value="Edificio">Edificio</option>
+                                <option value="Hotel">Hotel</option>
+                                <option value="Oficina">Oficina</option>
+                            </select>
+                        </div>
+                        <div class="col-md-5">
+                            <input asp-for="TipoInmuebleDesc" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="BloqueInterior" class="col-md-4 control-label"></label>
+                </div>
+                <div class="col-5">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <select asp-for="BloqueInterior" class="custom-select mr-sm-2">
+                                <option value="00">--Seleccione--</option>
+                                <option value="Manzana">Manzana</option>
+                                <option value="Zona">Zona</option>
+                                <option value="Bloque">Bloque</option>
+                                <option value="Habitacion">Habitacion</option>
+                            </select>
+                        </div>
+                        <div class="col-md-5">
+                            <input asp-for="BloqueOInteriorDesc" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Departamento" class="col-md-2 control-label"></label>
+                </div>
+                <div class="col-5">
+                    <select asp-for="Departamento" class="custom-select mr-sm-2">
+                        <option value="00">--Seleccione--</option>
+                        <option value="ANT">Antioquia</option>
+                        <option value="ATL">Atlántico</option>
+                        <option value="DC">Bogotá</option>
+                        <option value="BOL">Bolívar</option>
+                        <option value="CAL">Caldas</option>
+                        <option value="COR">Córdoba</option>
+                        <option value="CUN">Cundinamarca</option>
+                        <option value="HUI">Huila</option>
+                        <option value="MAG">Magdalena</option>
+                        <option value="MET">Meta</option>
+                        <option value="NSA">Norte de Santander</option>
+                        <option value="QUI">Quindio</option>
+                        <option value="RIS">Risaralda</option>
+                        <option value="SAN">Santander</option>
+                        <option value="SUC">Sucre</option>
+                        <option value="TOL">Tolima</option>
+                        <option value="VAC">Valle del Cauca</option>
+                    </select>
+                    <span asp-validation-for="Departamento" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Ciudad" class="col-md-2 control-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Ciudad" class="form-control" />
+                    <span asp-validation-for="Ciudad" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Telefono" class="col-md-2 control-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Telefono" class="form-control" />
+                    <span asp-validation-for="Telefono" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Observaciones" class="col-md-2 control-label"></label>
+                </div>
+                <div class="col-5">
+                    <textarea asp-for="Observaciones" class="form-control"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-8 offset-4">
+                    <div class="row">
+                        <div class="col-7">
+                            <button type="submit" class="btn btn-success form-control">Crear Orden</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,10 +1,28 @@
 ﻿@model Articulo
 <div class="col-3">
     <div class="card">
-        <img src="@Model.UrlImagen" class="img-thumbnail" width="" />
+        <img src="@Model.UrlImagen" class="img-thumbnail" width="100%" />
         <div class="card-body">
-            <h3 class="text-center"><a asp-area="Client" asp-controller="Home" asp-action="Details" asp-route-id="@Model.Id">@Model.Nombre</a></h3>
-            <p class="text-secondary">@Html.Raw(Model.Descripcion)</p>
+            <div class="row">
+                <div class="col-6">
+                    <h3 class="text-left " style="font-size: 25px; "><a asp-area="Client" asp-controller="Home" asp-action="Details" asp-route-id="@Model.Id">@Model.Nombre</a></h3>
+                </div>
+                <div class="col-6">
+                    <p class="text-right" style="font-size: 22px"><b>$ </b> @Model.Precio.ToString("#,##0.00").Replace(",00", "")</p>
+                </div>
+            </div>
+            <p class="text-left">@Html.Raw(Model.Descripcion)</p>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-12 col-md-6 pb-1">
+                        <a class="btn btn-success btn-sm"
+                           asp-area="Client"
+                           asp-controller="ShoppingCart"
+                           asp-action="AddToShoppingCart"
+                           asp-route-articuloId="@Model.Id"><i class="fa fa-shopping-cart"></i> Agregar al carro</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

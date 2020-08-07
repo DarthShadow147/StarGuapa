@@ -1,0 +1,15 @@
+﻿@model StarGuapa.Models.ViewModels.ShoppingCartViewModel
+
+@if (Model.ShoppingCart.ShoppingCartItems.Count > 0 || Model.ShoppingCart.ShoppingCartItems.Count == 0)
+{
+    <li>
+        <a asp-area="Client" asp-controller="ShoppingCart" asp-action="Index">
+            <span class="fa fa-shopping-cart carro"></span>
+            <span id="cart-status" class="carro">
+                @Model.ShoppingCart.ShoppingCartItems.Count
+            </span>
+        </a>
+    </li>
+}
+
+

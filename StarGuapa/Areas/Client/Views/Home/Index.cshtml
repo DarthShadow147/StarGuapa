@@ -46,9 +46,20 @@
                 <div class="card">
                     <img src="@articulo.UrlImagen" class="img-thumbnail" width="100%" />
                     <div class="card-body">
-                        <h5 class="text-center">@articulo.Nombre</h5>
-                        <p>@articulo.Precio</p>
-                        <a asp-action="Details" class="btn btn-success" style="border-radius:2px" asp-route-id="@articulo.Id">Ver producto</a>
+                        <div class="row">
+                            <div class="col-6">
+                                <h5 class="text-left" style="font-size: 25px">@articulo.Nombre</h5>
+                            </div>
+                            <div class="col-6">
+                                <p class="text-right" style="font-size: 22px"><b>$ </b> @articulo.Precio.ToString("#,##0.00").Replace(",00", "")</p>
+                            </div>
+                        </div>
+                        <p class="text-left">@Html.Raw(articulo.Descripcion)</p>
+                        <a asp-action="Details" class="btn btn-danger" style="border-radius:2px" asp-route-id="@articulo.Id">Ver producto</a>
+                        <a class="btn btn-success" style="border-radius:2px"
+                           asp-controller="ShoppingCart"
+                           asp-action="AddToShoppingCart"
+                           asp-route-articuloId="@articulo.Id"><i class="fa fa-shopping-cart"></i> Agregar al carro</a>
                     </div>
                 </div>
             </div>
